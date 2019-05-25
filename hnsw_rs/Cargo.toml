@@ -1,0 +1,23 @@
+[package]
+name = "hnsw_rs"
+version = "0.1.0"
+authors = ["croussel"]
+edition = "2018"
+
+[build]
+rustflags = ["-C", "target-cpu=native"]
+
+[dependencies]
+libc= "0.2"
+ndarray  = "0.12"
+
+[build-dependencies]
+cc = "1.0"
+bindgen = "0.49"
+
+[dev-dependencies]
+criterion = "0.2"
+
+[[bench]]
+name = "bench"
+harness = false
